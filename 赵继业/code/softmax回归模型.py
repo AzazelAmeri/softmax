@@ -53,7 +53,7 @@ for i in range(1000):
     for i in range(10):
         for k in range(20000):
             h_theta[i,k]=indic(label[k],i)-h_theta[i,k]#得到1{yi=j}-h_theta[i,k]的对应矩阵
-    dir=-1/20000*np.dot(matri,train)+0.0001*theta#偏导数
+    dir=-1/20000*np.dot(h_theta,train)+0.0001*theta#偏导数
     theta=theta-0.1*dir#theta-偏导数
     num+=1
     print('dir',dir)
