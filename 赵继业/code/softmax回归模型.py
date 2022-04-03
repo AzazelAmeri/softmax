@@ -11,11 +11,10 @@ def one_hot(label,n,k):
 def Normalize(data):
     '''归一化'''
 
-    #m=np.mean(data)
-    #mx=np.max(data)
-    #mn=np.min(data)
-    #return (data-m)/(mx-mn)
-    return data/255
+    m=np.mean(data)
+    mx=np.max(data)
+    mn=np.min(data)
+    return (data-m)/(mx-mn)
 
 def softmax(data):
     '''softmax层输出'''
